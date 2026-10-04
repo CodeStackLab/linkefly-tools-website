@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 38" width="170" height="38" fill="none">
+  <defs>
+    <linearGradient id="lf_plane_top_d" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <linearGradient id="lf_plane_bottom_d" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#F472B6"/>
+    </linearGradient>
+    <linearGradient id="lf_loop_trail_d" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    <linearGradient id="lf_word_grad_d" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="50%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#F472B6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ICON -->
+  <g transform="translate(1, 2)">
+    <!-- Speed Loop (Link) -->
+    <path d="M 8 26 C 2 20 3 11 9 7 C 15 3 22 5 25 10" stroke="url(#lf_loop_trail_d)" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+    <circle cx="8" cy="26" r="2.2" fill="#22D3EE"/>
+
+    <!-- Paper Plane (Fly) -->
+    <!-- Top Main Wing -->
+    <path d="M 32 3 L 10 20 L 20 18 Z" fill="url(#lf_plane_top_d)"/>
+    <!-- Center Keel Fold -->
+    <path d="M 20 18 L 17 26 L 23 20 Z" fill="#1E1B4B" opacity="0.6"/>
+    <!-- Right Wing -->
+    <path d="M 32 3 L 20 18 L 29 23 Z" fill="url(#lf_plane_bottom_d)"/>
+  </g>
+
+  <!-- TYPOGRAPHY -->
+  <text x="40" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', 'Helvetica Neue', sans-serif" font-size="25" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">Linke<tspan fill="url(#lf_word_grad_d)" font-weight="800">Fly</tspan></text>
+</svg>

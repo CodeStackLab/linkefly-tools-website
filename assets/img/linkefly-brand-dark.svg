@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 38" width="170" height="38" fill="none">
+  <defs>
+    <linearGradient id="lf_grad_brand_dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="50%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="lf_grad_text_dark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="50%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#FB7185"/>
+    </linearGradient>
+    <linearGradient id="lf_cyan_loop_dark" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    <filter id="lf_glow_dark" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#8B5CF6" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- EMBLEM BADGE -->
+  <g transform="translate(1, 2)" filter="url(#lf_glow_dark)">
+    <!-- Squircle Background -->
+    <rect x="0" y="0" width="34" height="34" rx="9" fill="#0F172A"/>
+    <rect x="0.5" y="0.5" width="33" height="33" rx="8.5" stroke="url(#lf_grad_brand_dark)" stroke-width="1.2" fill="none" opacity="0.9"/>
+
+    <!-- Wing / Flight (Fly) -->
+    <!-- Left Wing -->
+    <path d="M 17 6 L 7 28 L 17 22 Z" fill="#818CF8"/>
+    <!-- Right Wing -->
+    <path d="M 17 6 L 27 28 L 17 22 Z" fill="#FB7185"/>
+    <!-- Center Keel Fold -->
+    <path d="M 17 6 L 13.5 25 L 17 22 Z" fill="#1E1B4B" opacity="0.7"/>
+
+    <!-- Interlocking Link Arc (Link) -->
+    <path d="M 8.5 21 C 7 17.5 9 13.5 13.5 12 C 18 10.5 22 12 24.5 15" stroke="url(#lf_cyan_loop_dark)" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <circle cx="17" cy="16.5" r="2" fill="#FFFFFF"/>
+    <circle cx="17" cy="16.5" r="1" fill="#22D3EE"/>
+  </g>
+
+  <!-- BRAND TYPOGRAPHY: LINKEFLY -->
+  <g transform="translate(42, 0)">
+    <text x="0" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="26" font-weight="900" fill="#FFFFFF" letter-spacing="-0.8">Linke<tspan fill="url(#lf_grad_text_dark)">Fly</tspan></text>
+    <!-- Dot Spark Accent -->
+    <circle cx="106" cy="12" r="3" fill="#FB7185"/>
+  </g>
+</svg>

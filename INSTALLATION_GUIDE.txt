@@ -1,0 +1,58 @@
+================================================================================
+LINKEFLY - 150+ WEB TOOLS & 30 SEO BLOG POSTS PLATFORM
+COMPLETE STEP-BY-STEP INSTALLATION & MIGRATION GUIDE
+================================================================================
+
+HOW TO DEPLOY ON CPANEL, HOSTINGER, CYBERPANEL, DIRECTADMIN, OR VPS
+
+STEP 1: UPLOAD FILES
+--------------------
+1. Log into your hosting control panel and open File Manager.
+2. Go to your domain's root directory (usually 'public_html').
+3. Upload 'linkefly_complete_backup_with_db.zip'.
+4. Right-click and Extract the ZIP file directly into 'public_html'.
+
+STEP 2: CREATE MYSQL DATABASE
+-----------------------------
+1. In your hosting panel, open 'MySQL Databases'.
+2. Create a new database (e.g. 'cpaneluser_linkefly').
+3. Create a new database user with a secure password.
+4. Add the user to the database and grant 'ALL PRIVILEGES'.
+
+STEP 3: IMPORT DATABASE.SQL
+---------------------------
+1. Open 'phpMyAdmin' from your hosting panel.
+2. Click on your newly created database from the left menu.
+3. Click the 'Import' tab at the top.
+4. Click 'Choose File' and select 'database.sql' from your extracted files.
+5. Click 'Go' / 'Import'. All 28 tables and data will be imported!
+
+STEP 4: CONFIGURE COMPONENTS/.ENV
+---------------------------------
+1. In File Manager, navigate into the 'components' folder.
+2. Open and edit the '.env' file:
+   - Change APP_URL to your new domain:
+     APP_URL=https://your-new-domain.com
+
+   - Update database credentials:
+     DB_DATABASE=your_new_database_name
+     DB_USERNAME=your_new_database_username
+     DB_PASSWORD=your_new_database_password
+
+3. Save the file.
+
+STEP 5: VERIFY PERMISSIONS
+--------------------------
+Ensure write permissions (chmod 755 or 775) on:
+- storage/
+- components/storage/
+- components/bootstrap/cache/
+
+STEP 6: ACCESS YOUR LIVE SITE!
+------------------------------
+Visit https://your-new-domain.com in your browser.
+- All 150 online tools are live!
+- All 30 pillar blog posts are live under /blog!
+- All AdSense policy pages (/privacy-policy, /terms-of-service, etc.) are live!
+
+================================================================================
