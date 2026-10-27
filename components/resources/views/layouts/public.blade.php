@@ -169,6 +169,22 @@
                                                 <x-public.advertisement.area4 :advertisement="$advertisement" />
                                               @endif
 
+                                              @if ( $page->type == "post" )
+                                                <div class="d-flex flex-wrap align-items-center justify-content-between p-3 mb-4 rounded bg-light border text-muted small">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="{{ $profile->avatar ?? asset('assets/img/avatar.png') }}" class="avatar avatar-sm rounded-circle me-1" alt="Author" style="width: 32px; height: 32px; object-fit: cover;">
+                                                        <span>By <strong class="text-dark">{{ $profile->fullname ?? 'LinkeFly Editorial Team' }}</strong></span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center gap-3 mt-2 mt-sm-0 flex-wrap">
+                                                        <span><i class="far fa-calendar-alt me-1 text-primary"></i>Published: {{ \Carbon\Carbon::parse($page->updated_at ?? $page->created_at)->format('F j, Y') }}</span>
+                                                        <span>•</span>
+                                                        <span><i class="far fa-clock me-1 text-primary"></i>5 min read</span>
+                                                        <span>•</span>
+                                                        <span class="badge bg-success text-white px-2 py-1"><i class="fas fa-check-circle me-1"></i>Fact-Checked Guide</span>
+                                                    </div>
+                                                </div>
+                                              @endif
+
                                               {!! $pageTrans->description !!}
 
                                               @if ( $page->ads_status && $advertisement->area5_status && $advertisement->area5 != null )

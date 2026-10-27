@@ -133,6 +133,23 @@ class Home extends Component
                                     return $translatedPage;
                                 })->take( Sidebar::first()->tool_count )->filter()->toArray();
 
+            $home_recent_posts = PublicPage::where('type', 'post')
+                                ->where('post_status', true)
+                                ->orderBy('id', 'DESC')
+                                ->get()
+                                ->map(function ($page) {
+                                    $translatedPage = $page->translate( app()->getLocale() );
+                                    if ($translatedPage) {
+                                        $translatedPage->slug              = $page->slug;
+                                        $translatedPage->target            = $page->target;
+                                        $translatedPage->featured_image    = $page->featured_image;
+                                        $translatedPage->created_at        = $page->created_at;
+                                        $translatedPage->updated_at        = $page->updated_at;
+                                        return $translatedPage->toArray();
+                                    }
+                                    return null;
+                                })->filter()->values()->take(6)->toArray();
+
             $page = PublicPage::where('type', 'home')->first();
             
             $advertisement = Advertisement::first();
@@ -144,7 +161,8 @@ class Home extends Component
                 'tool_with_categories' => $tool_with_categories,
                 'tools'                => $tools,
                 'page'                 => $page,
-                'advertisement'        => $advertisement
+                'advertisement'        => $advertisement,
+                'home_recent_posts'    => $home_recent_posts
             ])->layout('layouts.public', [
                 'page'          => $page,
                 'pageTrans'     => $pageTrans,
